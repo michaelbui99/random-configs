@@ -1,13 +1,20 @@
 # nvim-init.vim
 
+## Alias (powershell)
+Such that you can type vim "filename" instead of nvim "filename"
+```cli
+Set-Alias vim nvim
+```
+
 ## Init
 $HOME = ~/. 
 
 ```cli
-cd ~/.
+cd ~/.AppData/Local
 ```
 ```cli
-mkdir .config/nvim
+mkdir nvim
+vim init.vim
 ```
 ```cli
 git clone https://github.com/michaelbui99/nvim-init.vim.git
@@ -16,5 +23,6 @@ git clone https://github.com/michaelbui99/nvim-init.vim.git
 ## Vim plug (Windows, Powershell, neovim)
 ```cli
 iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
-       ni "$HOME/.config/nvim/autoload/plug.vim" -Force
+    ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+
 ```
