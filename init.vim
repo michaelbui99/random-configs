@@ -33,3 +33,15 @@ set mouse=a
 " case insensitive search unless capital letters are used 
 set ignorecase 
 set smartcase
+
+
+" --- Plugins
+call plug#begin('~/.config/nvim/plugged')
+
+Plug 'navarasu/onedark.nvim'
+
+call plug#end()
+
+" --- Colors
+let g:onedark_style = 'darker'
+colorscheme onedark
