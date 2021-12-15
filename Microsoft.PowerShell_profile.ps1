@@ -8,6 +8,7 @@ oh-my-posh --init --shell pwsh --config $HOME/mb.omp.json | Invoke-Expression
 
 # Alias
 Set-Alias vim nvim
+Set-Alias grep findstr
 
 # Functions
 function touch {
