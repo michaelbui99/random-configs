@@ -3,7 +3,8 @@ Import-Module PSReadLine
 # Prompt
 Import-Module -Name Terminal-Icons
 Import-Module oh-my-posh
-Set-PoshPrompt -Theme paradox
+oh-my-posh --init --shell pwsh --config $HOME/mb.omp.json | Invoke-Expression
+# Set-PoshPrompt -Theme paradox
 
 # Alias
 Set-Alias vim nvim
