@@ -1,4 +1,5 @@
 Import-Module PSReadLine
+Set-PSReadlineOption -PredictionSource History
 
 # Prompt
 Import-Module -Name Terminal-Icons
