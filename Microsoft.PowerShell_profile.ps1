@@ -1,7 +1,7 @@
 Import-Module PSReadLine
 Set-PSReadlineOption -PredictionSource History
-Set-PSReadLineKeyHandler -Chord "CTRL+j" -Function HistorySearchForward
-Set-PsReadLineKeyHandler -Chord "CTRL+k" -Function HistorySearchBackward
+Set-PSReadLineKeyHandler -Chord "CTRL+j" -Function NextHistory
+Set-PsReadLineKeyHandler -Chord "CTRL+k" -Function PreviousHistory
 Set-PsReadLineKeyHandler -Chord "CTRL+l" -Function AcceptSuggestion
 Set-PSReadLineOption -PredictionViewStyle List
 
