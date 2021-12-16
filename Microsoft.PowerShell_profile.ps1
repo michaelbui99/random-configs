@@ -23,3 +23,8 @@ function touch {
       New-Item -Type File -Path $Path
     }
   }
+
+function which($command){
+    Get-Command -Name $command -ErrorAction SilentlyContinue | 
+        Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
