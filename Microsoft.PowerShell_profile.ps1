@@ -1,5 +1,8 @@
 Import-Module PSReadLine
 Set-PSReadlineOption -PredictionSource History
+Set-PSReadLineKeyHandler -Chord "CTRL+j" -Function HistorySearchForward
+Set-PsReadLineKeyHandler -Chord "CTRL+k" -Function HistorySearchBackward
+Set-PsReadLineKeyHandler -Chord "CTRL+l" -Function AcceptSuggestion
 
 # Prompt
 Import-Module -Name Terminal-Icons
