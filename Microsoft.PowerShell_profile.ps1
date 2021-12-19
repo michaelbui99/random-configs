@@ -8,6 +8,7 @@ Set-PSReadLineOption -PredictionViewStyle List
 # Prompt
 Import-Module -Name Terminal-Icons
 Import-Module oh-my-posh
+Import-Module posh-git
 oh-my-posh --init --shell pwsh --config $HOME/mb.omp.json | Invoke-Expression
 # Set-PoshPrompt -Theme paradox
 
