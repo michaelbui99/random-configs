@@ -26,3 +26,19 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
 
 ```
+
+## .ideavimrc
+```vim
+set number
+set relativenumber
+set ideajoin
+set ignorecase
+set smartcase
+set ignorecase
+set smartcase
+set tabstop=4 
+set softtabstop=4
+set expandtab 
+
+
+```
