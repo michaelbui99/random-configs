@@ -7,30 +7,30 @@ Set-PSReadLineOption -PredictionViewStyle List
 
 # Prompt
 Import-Module -Name Terminal-Icons
-Import-Module oh-my-posh
 Import-Module posh-git
-oh-my-posh --init --shell pwsh --config $HOME/mb.omp.json | Invoke-Expression
-# Set-PoshPrompt -Theme paradox
+oh-my-posh init pwsh --config $env:POSH_THEMES_PATH/nordtron.omp.json | Invoke-Expression
 
 # Alias
 Set-Alias vim nvim
 Set-Alias grep findstr
+Set-Alias ll ls
 
 # Functions
 function touch {
-    Param(
-      [Parameter(Mandatory=$true)]
-      [string]$Path
-    )
+  Param(
+    [Parameter(Mandatory = $true)]
+    [string]$Path
+  )
   
-    if (Test-Path -LiteralPath $Path) {
+  if (Test-Path -LiteralPath $Path) {
       (Get-Item -Path $Path).LastWriteTime = Get-Date
-    } else {
-      New-Item -Type File -Path $Path
-    }
   }
+  else {
+    New-Item -Type File -Path $Path
+  }
+}
 
-function which($command){
-    Get-Command -Name $command -ErrorAction SilentlyContinue | 
-        Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+function which($command) {
+  Get-Command -Name $command -ErrorAction SilentlyContinue | 
+  Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
