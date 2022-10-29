@@ -11,7 +11,6 @@ Install-Module -Name Terminal-Icons -Repository PSGallery -Force -Scope CurrentU
 Install-Module -Name PSReadLine -Force -Scope CurrentUser
 
 # Copy theme to expected location
-$homePath = echo $HOME
-cat .\mb.omp.json > $homePath\mb.omp.json
+cat .\mb.omp.json > $env:HOME\mb.omp.json
 # Copy terminal profile
 cat .\Microsoft.PowerShell_profile.ps1 >> $PROFILE
