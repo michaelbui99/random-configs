@@ -128,6 +128,7 @@ alias ssh-worker01="ssh cluster-worker01@cluster-worker01.local"
 alias python="python3"
 alias mibuimuxnew="tmux new -s mibui"
 alias mibuimux="tmux a -t mibui"
+alias serve="python -m http.server"
 
 # Load tmux session on start
 mibuimux
