@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
 fi
 
 # oh-my-posh
-eval "$(oh-my-posh init bash --config ~/.poshthemes/nordtron.omp.json)"
+eval "$(oh-my-posh init bash --config ~/.poshthemes/mibui.omp.json)"
 
 # git prompt
 #if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
