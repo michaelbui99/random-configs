@@ -26,7 +26,7 @@
         {
           "foreground": "#DCB977",
           "style": "plain",
-          "template": " \uf119",
+          "template": "{{ if gt .Code 0 }}\uf00d {{ .Meaning }}{{ else }}\uf42e{{ end }}",
           "type": "exit"
         },
         {
