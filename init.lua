@@ -99,6 +99,9 @@
   -- Custom
   vim.o.scrolloff=4
   vim.wo.relativenumber = true
+  vim.cmd('set expandtab')
+  vim.cmd('set tabstop=4')
+  vim.cmd('set softtabstop=4')
 
   -- Set highlight on search
   vim.o.hlsearch = false
@@ -343,10 +346,11 @@
   --  the `settings` field of the server config. You must look up that documentation yourself.
   local servers = {
     -- clangd = {},
-    -- gopls = {},
-    -- pyright = {},
-    -- rust_analyzer = {},
-    -- tsserver = {},
+    gopls = {},
+    pyright = {},
+    rust_analyzer = {},
+    tsserver = {},
+    bashls = {},
 
     sumneko_lua = {
       Lua = {
