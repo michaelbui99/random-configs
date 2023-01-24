@@ -13,7 +13,8 @@ sudo apt install -y git && \
 sudo apt install -y tmux && \
 sudo apt install -y unzip && \
 sudo apt install -y net-tools && \
-sudp apt install -y openjdk-17-jdk openjdk-17-jre
+sudp apt install -y openjdk-17-jdk openjdk-17-jre && \
+sudp apt install -y python3-pip && \
 yes | sudo snap install --classic nvim  
 
 ## Setup ssh key
@@ -74,3 +75,7 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 EOF
+
+## fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && \
+~/.fzf/install
