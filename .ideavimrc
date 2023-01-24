@@ -1,0 +1,10 @@
+set number
+set relativenumber
+set ideajoin
+set ignorecase
+set smartcase
+set ignorecase
+set smartcase
+set tabstop=4
+set softtabstop=4
+set expandtab
