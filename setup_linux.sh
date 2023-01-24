@@ -32,6 +32,7 @@ fi
 git config --global user.name "Michael Bui"
 git config --global user.email "michaelbui99@hotmail.com"
 git config --global credential.helper store
+git config --global commit.gpgsign true
 git config --global init.defaultBranch main
 
 ## Setup pretty prompt
