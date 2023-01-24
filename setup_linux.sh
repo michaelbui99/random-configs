@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 # NOTE: Run from cloned repository folder
 sudo apt update 
 sudo apt upgrade -y
@@ -17,7 +17,16 @@ sudp apt install -y openjdk-17-jdk openjdk-17-jre
 yes | sudo snap install --classic nvim  
 
 ## Setup ssh key
-ssh-keygen -b 4096 -N "" -f ~/.ssh/id_rsa
+SKIP_SSH_KEYGEN=false
+if [[ -f ~/.ssh/id_rsa ]];then
+        echo "Detected existing ssh keys."
+        echo "Skipping ssh-keygen."
+        $SKIP_SSH_KEYGEN=true
+fi
+
+if [[ $SKIP_SSH_KEYGEN == false ]]; then
+        ssh-keygen -b 4096 -N "" -f ~/.ssh/id_rsa
+fi
 
 ## Git config
 git config --global user.name "Michael Bui"
@@ -32,8 +41,8 @@ wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/theme
 unzip ~/.poshthemes/themes.zip -d ~/.poshthemes && \
 chmod u+rw ~/.poshthemes/*.omp.* && \
 rm ~/.poshthemes/themes.zip && \ 
+cp ./mibui.omp.json ~/.poshthemes/
 sudo oh-my-posh font install meslo && \
-cp ~/mibui.omp.json ~/.poshthemes/
 
 ## VIM 
 mkdir ~/.config/nvim && \
