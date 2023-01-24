@@ -41,7 +41,7 @@
         {
           "foreground": "#ffffff",
           "style": "plain",
-          "template": "<#d8dee9>\u276f</><#d8dee9>\u276f</> ",
+          "template": "<#88c0d0>\u276f</><#88c0d0>\u276f</> ",
           "type": "text"
         }
       ],
